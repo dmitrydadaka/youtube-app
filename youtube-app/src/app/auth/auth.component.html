@@ -1,0 +1,24 @@
+  <form class="login-container" [formGroup]="LoginForm" novalidate (ngSubmit)="onSubmit()">
+    <legend class="title-login-card">Login</legend>
+    <div>
+      <div>
+        <label>Email</label>
+      </div>
+      <input type="text" formControlName="email" placeholder="Enter your email">
+    </div>
+    <div *ngIf="LoginForm.controls['email'].invalid && LoginForm.controls['email'].touched">
+      The login email is invalid!
+    </div>
+    <div>
+      <div>
+        <label>Password</label>
+      </div>
+      <input type="text" formControlName="password" placeholder="Enter your password">
+    </div>
+    <div *ngIf="LoginForm.controls['password'].invalid && LoginForm.controls['password'].touched">
+      The login password is invalid!
+    </div>
+    <button [disabled]="LoginForm.invalid">
+      Ok
+    </button>
+  </form>

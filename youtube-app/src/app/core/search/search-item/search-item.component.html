@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="elementOfSearch" *ngFor="let item of items">
+    <div>
+      <img class="image" src="{{item.snippet.thumbnails.default.url}}" alt="Image of channel">
+    </div>
+    <!-- {{item.statistics.viewCount}}
+      {{item.statistics.likeCount}}
+      {{item.statistics.commentCount}} -->
+    <div>
+      <button class="more-button" (click)="getMoreInformation(item)">More</button>
+    </div>
+  </div>
+</div>

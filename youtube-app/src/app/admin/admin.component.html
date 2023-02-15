@@ -1,0 +1,53 @@
+<div class="admin-form">
+  <form [formGroup]="adminForm" novalidate (ngSubmit)="onSubmit()" >
+    <legend class="title-admin-card">Create new card</legend>
+    <div>
+      <div>
+        <label>Title</label>
+      </div>
+      <input class="admin-input" type="text" formControlName="title" placeholder="Enter your title">
+    </div>
+    <div *ngIf="adminForm.controls['title'].invalid && adminForm.controls['title'].touched">
+      The title is too short!
+    </div>
+    <div>
+      <div>
+        <label>Description</label>
+      </div>
+      <input class="admin-input" type="text" formControlName="description" placeholder="Enter your description">
+    </div>
+    <div *ngIf="adminForm.controls['description'].invalid && adminForm.controls['description'].touched">
+      The description is too long!
+    </div>
+    <div>
+      <div>
+        <label>Date</label>
+      </div>
+      <input class="admin-input" type="text" formControlName="creationDate" placeholder="Enter your description">
+    </div>
+    <div *ngIf="adminForm.controls['creationDate'].invalid && adminForm.controls['creationDate'].touched">
+      This data is future!
+    </div>
+    <div>
+      <div>
+        <label>Img</label>
+      </div>
+      <input class="admin-input" type="text" formControlName="linkToTheImageCover" placeholder="Enter your link to img">
+    </div>
+    <div *ngIf="adminForm.controls['linkToTheImageCover'].invalid && adminForm.controls['linkToTheImageCover'].touched">
+      The link is wrong!
+    </div>
+    <div>
+      <div>
+        <label>Link Video</label>
+      </div>
+      <input class="admin-input" type="text" formControlName="checkForTheUrlValidity" placeholder="Enter your link">
+    </div>
+    <div *ngIf="adminForm.controls['checkForTheUrlValidity'].invalid && adminForm.controls['checkForTheUrlValidity'].touched">
+      The link video is wrong!
+    </div>
+    <button [disabled]="adminForm.invalid">
+      Create card
+    </button>
+  </form>
+</div>

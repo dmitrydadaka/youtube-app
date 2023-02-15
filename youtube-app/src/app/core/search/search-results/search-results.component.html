@@ -1,0 +1,14 @@
+<div id="sorting-block" *ngIf="criterionsBlock" >
+  <form class="dropdown_settings">
+    <div >
+      <span>Sorting by</span>
+      <button type="button" (click)="sortingByDate()">date</button>
+      <button type="button" (click)="sortingByCountOfViews()">count of views</button>
+      <span>
+        by word or sentence
+        <input #searchingResultsValue (keyup)="onSubmitResults(searchingResultsValue.value)" type="text" />
+      </span>
+    </div>
+  </form>
+  <app-search-item [items]="items"></app-search-item>
+</div>
