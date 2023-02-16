@@ -1,33 +1,35 @@
-.admin-form{
+.admin-form {
   //position: absolute;
-  width: 382.43px;
-  height: 43.91px;
-  left: 25.16px;
-  top: 190.08px;
+  width      : 382.43px;
+  height     : 43.91px;
+  left       : 25.16px;
+  top        : 190.08px;
   margin-left: 450px;
-.title-admin-card{
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22.6439px;
-  line-height: 27px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
 
-  color: #000000;
-}
-button{
-  margin-top: 10px;
-  color: #2F80ED;
-}
+  .title-admin-card {
+    font-family  : 'Roboto';
+    font-style   : normal;
+    font-weight  : 700;
+    font-size    : 22.6439px;
+    line-height  : 27px;
+    display      : flex;
+    align-items  : center;
+    margin-bottom: 10px;
 
-.admin-input{
-width: 382.43px;
-height: 44.76px;
-left: 25.16px;
-top: 111.24px;
+    color: #000000;
+  }
 
-background: #E0E0E0;
-}
+  button {
+    margin-top: 10px;
+    color     : #2F80ED;
+  }
+
+  .admin-input {
+    width : 382.43px;
+    height: 44.76px;
+    left  : 25.16px;
+    top   : 111.24px;
+
+    background: #E0E0E0;
+  }
 }
