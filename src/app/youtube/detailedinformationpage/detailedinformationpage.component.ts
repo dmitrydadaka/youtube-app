@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { Item } from '../../core/search/search-item.model';
 
 @Component({
@@ -10,10 +11,13 @@ export class DetailedinformationpageComponent implements OnInit {
 
   public item!: Item;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.item = JSON.parse(localStorage.getItem('itemToString')!);
     localStorage.removeItem('itemToString');
+  }
+  backToTheMain() {
+    this.router.navigate(['/'])
   }
 }
