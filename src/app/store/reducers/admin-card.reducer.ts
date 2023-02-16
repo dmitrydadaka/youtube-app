@@ -1,4 +1,4 @@
-import { AdminCardItem } from '../../admin/admin-card.model';
+/* import { AdminCardItem } from '../../admin/admin-card.model';
 import { AdminCardAction, AdminCardActionType } from '../actions/admin-card.action'
 import { State } from '../state.model';
 //create a dummy initial state
@@ -23,3 +23,4 @@ export function AdminCardReducer(
       return state;
   }
 }
+ */

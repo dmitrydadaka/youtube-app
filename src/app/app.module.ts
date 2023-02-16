@@ -7,8 +7,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AdminComponent } from './admin/admin.component';
-import { AdminCardReducer } from './store/reducers/admin-card.reducer';
-import { StoreModule } from '@ngrx/store';
+//import { AdminCardReducer } from './store/reducers/admin-card.reducer';
+//import { StoreModule } from '@ngrx/store';
 //import { reducers } from './store/reducers/';
 //import { counterReducer } from './store/reducers/counter.reducer';
 

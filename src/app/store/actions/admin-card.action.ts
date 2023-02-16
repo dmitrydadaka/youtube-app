@@ -1,4 +1,4 @@
- import { Action } from '@ngrx/store';
+/* import { Action } from '@ngrx/store';
 import { AdminCardItem } from '../../admin/admin-card.model';
 
 export enum AdminCardActionType {
@@ -10,4 +10,4 @@ export class AddItemAction implements Action {
   constructor(public payload: AdminCardItem) { }
 }
 export type AdminCardAction = AddItemAction;
-
+ */
