@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit {
   public criterionsBlock: boolean = false;
   public authToken: string = localStorage.getItem('authToken') || '';
   public nickName: string = localStorage.getItem('email') || 'your name';
+  public logoutVision: boolean = false;
   private subscription!: Subscription;
 
   constructor(
@@ -63,4 +64,8 @@ export class HeaderComponent implements OnInit {
     this.router.navigate(['admin']);
   }
 
+  toLogoutVision() {
+    if(!this.logoutVision) this.logoutVision = true;
+    else this.logoutVision = false;
+  }
 }
