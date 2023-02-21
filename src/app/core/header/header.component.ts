@@ -1,4 +1,4 @@
-import { Component, Inject, OnInit, Output } from '@angular/core';
+import { Component, Inject, Input, OnInit, Output } from '@angular/core';
 import { DataService } from '../services/data.service';
 import { Item } from '../search/search-item.model';
 import { Router } from '@angular/router';
@@ -19,6 +19,8 @@ export class HeaderComponent implements OnInit {
   public criterionsBlock: boolean = false;
   public authToken: string = localStorage.getItem('authToken') || '';
   public nickName: string = localStorage.getItem('email') || 'your name';
+  @Input() mainRouter!: boolean;
+
   public logoutVision: boolean = false;
   private subscription!: Subscription;
 
@@ -29,6 +31,9 @@ export class HeaderComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    let mainRouterToString = this.mainRouter.toString();
+    localStorage.setItem( 'mainRouterToSting', mainRouterToString);
+
     this.subscription = this.dataService.getItems().subscribe(response => this.items = response);
     return this.subscription;
     //else for statistics this.dataService.getItemsStatisticsAPi().subscribe( response => this.items = response);
@@ -67,5 +72,10 @@ export class HeaderComponent implements OnInit {
   toLogoutVision() {
     if(!this.logoutVision) this.logoutVision = true;
     else this.logoutVision = false;
+  }
+
+  checkTheRoute() {
+    if (this.router.url === '/') return true;
+    else return false;
   }
 }

@@ -17,6 +17,7 @@ export class AdminComponent implements OnInit {
   public checkForTheUrlValidity!: boolean;
   public linkToTheImageCover!: string;
   public adminForm!: FormGroup;
+
  // public admin: boolean = true;
 
   constructor(
@@ -27,6 +28,7 @@ export class AdminComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
    // if(this.admin === true) this.router.navigate(['login/admin']);
    }
 

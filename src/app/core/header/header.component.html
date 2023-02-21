@@ -15,10 +15,9 @@
         </svg>
       </span>
 
-      <input #searchingValue type="text" (keydown)="onKeydown(searchingValue.value)" />
+      <input [disabled]="mainRouter" #searchingValue type="text" (keydown)="onKeydown(searchingValue.value)" />
       <!-- <button type="button" (click)="onSubmit(searchingValue.value)">Search</button> -->
-
-      <svg (click)="addCriterions()" class="add-criterions" width="32" height="32" viewBox="0 0 32 32" fill="none"
+        <svg *ngIf="mainRouter" (click)="addCriterions()" class="add-criterions" width="32" height="32" viewBox="0 0 32 32" fill="none"
         xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_12524_112)">
           <rect x="2" y="4" width="24" height="24" rx="5" fill="#2F80ED" />
