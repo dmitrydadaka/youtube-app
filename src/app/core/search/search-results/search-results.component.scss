@@ -1,14 +1,14 @@
 #sorting-block {
   position     : absolute;
-  width        : 1440px;
-  height       : 50px;
-  //align-items: center;
+  width           : 1440px;
+  // height       : 50px;
+  margin-top      : 75px;
 
+  //align-items: center;
   .dropdown_settings {
     width      : 600px;
     height     : 14px;
-    margin-left: 350px;
-    margin-top : 50px;
+    margin-left: 375px;
   }
 
   button {

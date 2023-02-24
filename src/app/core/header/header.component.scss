@@ -1,22 +1,14 @@
 #header {
-  //position: absolute;
-  width : 1440px;
-  height: 100px;
-  left  : 0px;
-  top   : 30px;
-  margin-bottom: 10px;
+  width: 1440px;
+  left : 0px;
 
-  //text-align: center;
   #header-header {
-    height: 100px;
-    top   : 50px;
-
     #logo {
       position: absolute;
       width   : 50px;
       height  : 50px;
       top     : 27.5px;
-      left    : 350px;
+      left    : 400px;
     }
 
     input {
@@ -25,7 +17,7 @@
       width     : 400px;
       height    : 19px;
       top       : 33px;
-      left      : 400px;
+      left      : 450px;
     }
 
     .buttonAdmin {
@@ -38,14 +30,21 @@
       left         : 1200px;
     }
 
-    .add-criterions {
+    .add-criterions-button {
       position     : absolute;
+      background-image: url("../../../assets/search_settings.svg");
       filter       : drop-shadow(2px 0px 4px #2F80ED);
-      border-radius: 0px;
-      width        : 30px;
-      height       : 30px;
-      left         : 815px;
+      border-radius: 5px;
+      width        : 26px;
+      height       : 26px;
+      left         : 865px;
       top          : 32px;
+      border-color: drop-shadow(2px 0px 4px #2F80ED);
+      color: drop-shadow(2px 0px 4px #2F80ED);
+      background-repeat: no-repeat;
+      align-items: center;
+      border: #EFEFEF;
+      padding:0px 0px 0px 0px;
     }
 
     .logout {
@@ -84,5 +83,4 @@
     top     : 33px;
     left    : 1260px;
   }
-
 }
