@@ -17,8 +17,7 @@
 
       <input [disabled]="mainRouter" #searchingValue type="text" (keydown)="onKeydown(searchingValue.value)" />
       <!-- <button type="button" (click)="onSubmit(searchingValue.value)">Search</button> -->
-      <button [disabled]="mainRouter" (click)="addCriterions()" class="add-criterions-button" type="button">
-      <i class="add-criterions"></i>
+      <button  [disabled]="mainRouter" (click)="addCriterions()" class="add-criterions-button" type="button">
       </button>
       <button *ngIf="logoutVision" class="buttonAdmin" type="button" (click)="toAdminPage()">Admin</button>
       <button *ngIf="logoutVision" class="logout" type="button" (click)="logout()">Logout</button>

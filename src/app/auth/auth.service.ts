@@ -26,4 +26,8 @@ export class AuthService {
     localStorage.removeItem('authToken');
     localStorage.removeItem('email');
   }
+
+  getAuthToken() {
+    return localStorage.getItem('authToken')
+  }
 }

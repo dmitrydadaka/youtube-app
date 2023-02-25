@@ -36,7 +36,7 @@ export class HeaderComponent implements OnInit {
 
     this.subscription = this.dataService.getItems().subscribe(response => this.items = response);
     return this.subscription;
-    //else for statistics this.dataService.getItemsStatisticsAPi().subscribe( response => this.items = response);
+    //this.dataService.getItemsStatisticsAPi().subscribe( response => this.items = response);
   }
 
   ngOnDestroy() {

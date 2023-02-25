@@ -6,6 +6,9 @@ import { AuthComponent } from './auth.component';
 import { AuthGuard } from './auth.guard';
 import { AuthService } from './auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthInterceptorService} from './authInterceptorService';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -19,7 +22,12 @@ import { ReactiveFormsModule } from '@angular/forms';
   ],
   exports: [],
 
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, {
+    provide: HTTP_INTERCEPTORS,
+    useFactory: AuthInterceptorService,
+    multi: true
+   }
+  ],
 
 })
 export class AuthModule { }
