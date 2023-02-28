@@ -8,9 +8,8 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AdminComponent } from './admin/admin.component';
 import { StoreModule } from '@ngrx/store';
-//import { AdminCardReducer } from './store/reducers/admin-card.reducer';
-//import { StoreModule } from '@ngrx/store';
-//import { reducers } from './store/reducers/';
+import { AdminCardReducer } from './store/reducers/admin-card.reducer';
+import { reducers } from './store/reducers/';
 //import { counterReducer } from './store/reducers/counter.reducer';
 
 
@@ -28,7 +27,7 @@ import { StoreModule } from '@ngrx/store';
     SharedModule,
     HttpClientModule,
     ReactiveFormsModule,
-    StoreModule.forRoot({}, {}),
+    StoreModule.forRoot(reducers),
     //StoreModule.forRoot({count: counterReducer})
   ],
   providers: [],
