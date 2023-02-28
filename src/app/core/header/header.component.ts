@@ -34,14 +34,11 @@ export class HeaderComponent implements OnInit {
     let mainRouterToString = this.mainRouter.toString();
     localStorage.setItem( 'mainRouterToSting', mainRouterToString);
 
-    this.subscription = this.dataService.getItems().subscribe(response => this.items = response);
-    return this.subscription;
+   /*  this.subscription = this.dataService.getItems().subscribe(response => this.items = response);
+    return this.subscription; */
     //this.dataService.getItemsStatisticsAPi().subscribe( response => this.items = response);
   }
 
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
 
   onKeydown(searchingValue: string) {
     let preventCallApi = '';
@@ -77,5 +74,9 @@ export class HeaderComponent implements OnInit {
   checkTheRoute() {
     if (this.router.url === '/') return true;
     else return false;
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
   }
 }
