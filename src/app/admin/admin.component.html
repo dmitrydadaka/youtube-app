@@ -1,5 +1,11 @@
 <div class="admin-form">
-  <form [formGroup]="adminForm" novalidate (ngSubmit)="onSubmit()" >
+  <h4>Testing NgRx</h4>
+  <ul>
+    <li *ngFor="let adminCards of adminCards$ | async">
+      {{adminCards.description}}
+    </li>
+  </ul>
+  <form [formGroup]="adminForm" novalidate (ngSubmit)="addToStoreNewAdminCards()">
     <legend class="title-admin-card">Create new card</legend>
     <div>
       <div>
@@ -17,7 +23,7 @@
       <input class="admin-input" type="text" formControlName="description" placeholder="Enter your description">
     </div>
     <div *ngIf="adminForm.controls['description'].invalid && adminForm.controls['description'].touched">
-      The description is too long!
+      The description is invalid!
     </div>
     <div>
       <div>
@@ -43,10 +49,13 @@
       </div>
       <input class="admin-input" type="text" formControlName="checkForTheUrlValidity" placeholder="Enter your link">
     </div>
-    <div *ngIf="adminForm.controls['checkForTheUrlValidity'].invalid && adminForm.controls['checkForTheUrlValidity'].touched">
+    <div
+      *ngIf="adminForm.controls['checkForTheUrlValidity'].invalid && adminForm.controls['checkForTheUrlValidity'].touched">
       The link video is wrong!
     </div>
-    <button [disabled]="adminForm.invalid">
+    <button type="submit">
+      <!--       [disabled]="adminForm.invalid">
+ -->
       Create card
     </button>
   </form>

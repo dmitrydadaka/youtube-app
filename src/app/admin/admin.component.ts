@@ -2,7 +2,14 @@ import { Component, OnInit, Optional } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
-import { CustomValidators } from '../shared/custom-validators';
+import { Observable } from 'rxjs';
+import { AdminCardItem } from './admin-card.model';
+import { State } from '../store/state.model';
+import { Store } from '@ngrx/store';
+import { AppState } from '../store/reducers';
+import { AddItemAction } from '../store/actions/admin-card.action';
+
+//import { CustomValidators } from '../shared/custom-validators';
 
 @Component({
   selector: 'app-admin',
@@ -17,17 +24,21 @@ export class AdminComponent implements OnInit {
   public checkForTheUrlValidity!: boolean;
   public linkToTheImageCover!: string;
   public adminForm!: FormGroup;
+  public adminCards$!: any;
+
 
  // public admin: boolean = true;
 
   constructor(
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    private store: Store<AppState>
   ) {
     this._createForm();
   }
 
   ngOnInit(): void {
+    this.adminCards$ = this.store.select((store) => store.adminCards);
    // if(this.admin === true) this.router.navigate(['login/admin']);
    }
 
@@ -62,6 +73,11 @@ export class AdminComponent implements OnInit {
 
   public logout() {
     this.router.navigate(['login']);
+  }
+
+  public addToStoreNewAdminCards() {
+    this.store.dispatch(new AddItemAction(this.adminForm.value));
+    this.adminForm.reset();
   }
 
 }
