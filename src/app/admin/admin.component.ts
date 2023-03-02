@@ -51,7 +51,6 @@ export class AdminComponent implements OnInit {
         Validators.maxLength(20)
       ]),
       description: new FormControl('', [
-        Optional,
         Validators.minLength(8),
         Validators.maxLength(255)
       ]),

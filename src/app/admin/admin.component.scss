@@ -4,7 +4,7 @@
   left       : 25.16px;
   top        : 190.08px;
   margin-left: 450px;
-  margin-top: 75px;
+  margin-top : 75px;
 
   .title-admin-card {
     font-family  : 'Roboto';
@@ -16,7 +16,11 @@
     align-items  : center;
     margin-bottom: 10px;
 
-    color: #000000;
+    color: #2F80ED;
+  }
+
+  label {
+    color: #2F80ED;
   }
 
   button {
@@ -31,5 +35,9 @@
     top   : 111.24px;
 
     background: #E0E0E0;
+  }
+
+  .message-error {
+    color: red;
   }
 }

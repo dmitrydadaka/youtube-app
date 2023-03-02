@@ -15,7 +15,7 @@
     align-items  : center;
     margin-bottom: 10px;
 
-    color: #000000;
+    color: #2F80ED;
   }
 
   button {
@@ -32,5 +32,13 @@
     top   : 134px;
 
     background: #E0E0E0;
+  }
+
+  label {
+    color: #2F80ED;
+  }
+
+  .error-message {
+    color: red;
   }
 }
