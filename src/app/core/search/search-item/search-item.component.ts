@@ -3,7 +3,6 @@ import { Item } from '../search-item.model';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { AppState } from '../../../store/reducers';
-import { AddItemAction } from '../../../store/actions/admin-card.action';
 import { AddResultsItemAction } from '../../../store/actions/item.action';
 
 @Component({
@@ -19,7 +18,7 @@ export class SearchItemComponent implements OnInit {
     private router: Router,
     private store: Store<AppState>
     ) {
-    //this.items.every( i => this.store.dispatch(new AddResultsItemAction(i)) )
+    this.items.every( i => this.store.dispatch(new AddResultsItemAction(i)));
    }
 
   ngOnInit(): void {

@@ -51,7 +51,7 @@ export class AdminComponent implements OnInit {
         Validators.minLength(8),
         Validators.maxLength(255)
       ]),
-      creationDate: new FormControl('', [
+      creationDate: new FormControl( new Date(), [
         Validators.required
       ]),
       checkForTheUrlValidity: new FormControl('', [
