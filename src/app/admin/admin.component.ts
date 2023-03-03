@@ -1,10 +1,7 @@
-import { Component, OnInit, Optional } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
-import { Observable } from 'rxjs';
-import { AdminCardItem } from './admin-card.model';
-import { State } from '../store/state.model';
 import { Store } from '@ngrx/store';
 import { AppState } from '../store/reducers';
 import { AddItemAction } from '../store/actions/admin-card.action';

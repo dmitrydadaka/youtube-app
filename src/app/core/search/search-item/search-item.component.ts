@@ -1,6 +1,10 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Item } from '../search-item.model';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
+import { AppState } from '../../../store/reducers';
+import { AddItemAction } from '../../../store/actions/admin-card.action';
+import { AddResultsItemAction } from '../../../store/actions/item.action';
 
 @Component({
   selector: 'app-search-item',
@@ -11,7 +15,12 @@ export class SearchItemComponent implements OnInit {
 
   @Input() items: Item[] = [];
 
-  constructor( private router: Router) { }
+  constructor(
+    private router: Router,
+    private store: Store<AppState>
+    ) {
+    //this.items.every( i => this.store.dispatch(new AddResultsItemAction(i)) )
+   }
 
   ngOnInit(): void {
   }
